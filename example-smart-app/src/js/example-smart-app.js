@@ -32,10 +32,10 @@
           var lname = '';
 
           if (typeof patient.name[0] !== 'undefined') {
-            //fname = patient.name[0].given.join(' ');
-            fname = patient.name[0].given + '';
-            //lname = patient.name[0].family.join(' ');
-            lname = patient.name[0].family + '';
+            fname = patient.name[0].given.join(' ');
+            
+            //lname = patient.name[0].family.join(' '); // family is a string, not an array. 
+            lname = patient.name[0].family;
           }
 
           var height = byCodes('8302-2');
